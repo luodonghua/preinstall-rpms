@@ -49,5 +49,18 @@ EOD
 
 echo "Oracle Service: XE (CDB), xepdb1 (PDB)"
 
+# Enable archived log
+echo "#!/usr/bin/bash" > /tmp/enable_archivelog.sh
+echo "mkdir /opt/oracle/fra" >> /tmp/enable_archivelog.sh
+echo "sqlplus / as sysdba <<EOD" >> /tmp/enable_archivelog.sh
+echo "alter system set db_recovery_file_dest_size=10G;" >> /tmp/enable_archivelog.sh
+echo "alter system set db_recovery_file_dest='/opt/oracle/fra';" >> /tmp/enable_archivelog.sh
+echo "shutdown immediate" >> /tmp/enable_archivelog.sh
+echo "startup mount" >> /tmp/enable_archivelog.sh
+echo "alter database archivelog;" >> /tmp/enable_archivelog.sh
+echo "alter database open;" >> /tmp/enable_archivelog.sh
+echo "EOD" >> /tmp/enable_archivelog.s
 
+chmod +x  /tmp/enable_archivelog.sh
+sudo su - oracle -c  /tmp/enable_archivelog.sh
 
