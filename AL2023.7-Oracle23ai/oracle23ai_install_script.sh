@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 
-dnf install -y wget
+sudo dnf install -y wget
 
 # Download Oracle Prerequisites and RPM
 # https://docs.oracle.com/en/database/oracle/oracle-database/23/xeinl/installing-oracle-database-free.html#GUID-46EA860A-AAC4-453F-8EEE-42CC55A4FAD5
@@ -15,8 +15,8 @@ wget https://github.com/luodonghua/preinstall-rpms/raw/refs/heads/main/AL2023.7-
 
 
 # Install Oracle Prerequisites
-dnf install -y ./oracle-database-preinstall-23ai*.rpm ./dummy_*.rpm
+sudo dnf install -y ./oracle-database-preinstall-23ai*.rpm ./dummy_*.rpm
 
 # Install Oracle Database
-dnf install -y .oracle-database-free-23ai*.rpm
+sudo dnf install -y .oracle-database-free-23ai*.rpm
 
