@@ -25,10 +25,10 @@ sudo sed -i 's/\(.*\):N$/\1:Y/' /etc/oratab
 sudo systemctl enable --now oracle-xe-21c
 
 # Setup Oracle Envronment Variable
-sudo su -c "echo 'export ORACLE_SID=FREE' >> /home/oracle/.bashrc"
+sudo su -c "echo 'export ORACLE_SID=XE' >> /home/oracle/.bashrc"
 sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/oracle/.bashrc"
 sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/oracle/.bashrc"
 
-sudo su -c "echo 'export ORACLE_SID=FREE' >> /home/ec2-user/.bashrc"
+sudo su -c "echo 'export ORACLE_SID=XE' >> /home/ec2-user/.bashrc"
 sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/ec2-user/.bashrc"
 sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/ec2-user/.bashrc"
