@@ -13,7 +13,7 @@ wget https://download.oracle.com/otn-pub/otn_software/db-free/oracle-database-fr
 
 
 # Install Oracle Prerequisites
-sudo dnf install -y ./oracle-database-preinstall-23ai*.rpm ./x86_64/dummy_*.rpm
+sudo dnf install -y ./oracle-database-preinstall-23ai*.rpm ./x86_64/dummy-*.rpm
 
 # Install Oracle Database
 sudo dnf install -y .oracle-database-free-23ai*.rpm

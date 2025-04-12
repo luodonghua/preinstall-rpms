@@ -15,7 +15,7 @@ wget https://github.com/luodonghua/preinstall-rpms/raw/refs/heads/main/AL2023.7-
 
 
 # Install Oracle Prerequisites
-sudo dnf install -y ./oracle-database-preinstall-23ai*.rpm ./dummy_*.rpm
+sudo dnf install -y ./oracle-database-preinstall-23ai*.rpm ./dummy-*.rpm
 
 # Install Oracle Database
 sudo dnf install -y .oracle-database-free-23ai*.rpm
