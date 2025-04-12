@@ -18,6 +18,10 @@ sudo dnf install -y ./oracle-database-preinstall-21c*.rpm ./dummy-*.rpm
 # Install Oracle Database
 sudo dnf install -y ./oracle-database-xe-21c*.rpm
 
+#
+# Install this RPM to avoid error: FATAL] Error while executing "/opt/oracle/product/21c/dbhomeXE/ord/im/admin/ordlib.sql"
+sudo dnf install -y libxcrypt-compat
+
 # Configure Database
 #
 sudo su -c "(echo 'Welcome123_'; echo 'Welcome123_';) | /etc/init.d/oracle-xe-21c configure"
