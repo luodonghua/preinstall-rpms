@@ -29,10 +29,10 @@ sudo sed -i 's/\(.*\):N$/\1:Y/' /etc/oratab
 sudo systemctl enable --now oracle-free-23ai
 
 # Setup Oracle Envronment Variable
-sudo su -c "echo 'export ORACLE_SID=FREE' >> /home/oracle/.bashrc"
-sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/oracle/.bashrc"
-sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/oracle/.bashrc"
+sudo su -c "echo 'export ORACLE_SID=FREE' >> /home/oracle/.bash_profile"
+sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/oracle/.bash_profile"
+sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/oracle/.bash_profile"
 
-sudo su -c "echo 'export ORACLE_SID=FREE' >> /home/ec2-user/.bashrc"
-sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/ec2-user/.bashrc"
-sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/ec2-user/.bashrc"
+sudo su -c "echo 'export ORACLE_SID=FREE' >> /home/ec2-user/.bash_profile"
+sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/ec2-user/.bash_profile"
+sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/ec2-user/.bash_profile"

@@ -18,3 +18,21 @@ sudo dnf install -y ./oracle-database-preinstall-23ai*.rpm ./x86_64/dummy-*.rpm
 # Install Oracle Database
 sudo dnf install -y ./oracle-database-free-23ai*.rpm
 
+# Configure Database
+#
+sudo su -c "(echo 'Welcome123_'; echo 'Welcome123_';) | /etc/init.d/oracle-free-23ai configure"
+
+# Configure AutoStart
+sudo sed -i 's/\(.*\):N$/\1:Y/' /etc/oratab
+sudo systemctl enable --now oracle-free-23ai
+
+# Setup Oracle Envronment Variable
+sudo su -c "echo 'export ORACLE_SID=FREE' >> /home/oracle/.bash_profile"
+sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/oracle/.bash_profile"
+sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/oracle/.bash_profile"
+
+sudo su -c "echo 'export ORACLE_SID=FREE' >> /home/ec2-user/.bash_profile"
+sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/ec2-user/.bash_profile"
+sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/ec2-user/.bash_profile"
+~
+~
