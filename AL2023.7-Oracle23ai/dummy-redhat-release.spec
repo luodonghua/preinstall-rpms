@@ -1,12 +1,12 @@
 Name:           dummy-redhat-release
 Version:        9.0
 Release:        1%{?dist}
-Summary:        Fake Red Hat Enterprise Linux release file
+Summary:        Dummy Red Hat Enterprise Linux release file
 License:        MIT
 
 BuildArch:      x86_64
 Provides:       redhat-release = 9.0
-Provides:       system-release = 9.0
+#Provides:       system-release = 2023.7.20250331
 
 %description
 This package provides a dummy /etc/redhat-release file to satisfy dependencies
