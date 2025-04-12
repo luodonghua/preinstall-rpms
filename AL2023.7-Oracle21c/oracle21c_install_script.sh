@@ -38,3 +38,13 @@ sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/oracle/.bash_profile"
 sudo su -c "echo 'export ORACLE_SID=XE' >> /home/ec2-user/.bash_profile"
 sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/ec2-user/.bash_profile"
 sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/ec2-user/.bash_profile"
+
+. ~/.bash_profile
+sqlplus SYSTEM/Welcome123_ <<EOD
+EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);
+EOD
+
+echo "Oracle Service: XE (CDB), xepdb1 (PDB)"
+
+
+
