@@ -8,7 +8,7 @@ sudo dnf install -y wget
 #
 wget https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackage/oracle-database-preinstall-21c-1.0-1.el8.x86_64.rpm
 wget https://download.oracle.com/otn-pub/otn_software/db-express/oracle-database-xe-21c-1.0-1.ol8.x86_64.rpm
-wget https://github.com/luodonghua/preinstall-rpms/raw/refs/heads/main/AL2023.7-Oracle21c/x86_64/dummy-redhat-release-9.0-1.amzn2023.x86_64.rpm
+wget https://github.com/luodonghua/preinstall-rpms/raw/refs/heads/main/AL2023.7-Oracle21c/x86_64/dummy-redhat-release-8.7-1.amzn2023.x86_64.rpm
 wget https://github.com/luodonghua/preinstall-rpms/raw/refs/heads/main/AL2023.7-Oracle21c/x86_64/dummy-compat-openssl10-1.0.2o-1.amzn2023.x86_64.rpm
 
 
