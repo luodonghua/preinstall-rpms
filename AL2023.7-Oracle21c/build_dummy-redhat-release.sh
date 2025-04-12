@@ -10,9 +10,9 @@ rpmdev-setuptree
 rpmbuild --define "_rpmdir ." -bb dummy-redhat-release.spec
 
 # Copy build RPM file to current folder
-# cp ./x86_64/dummy-redhat-release-9.0-1*.rpm .
+# cp ./x86_64/dummy-redhat-release-8.7-1*.rpm .
 #
 # To Install, run below command
-# sudo rpm -ivh ./x86_64/dummy-redhat-release-9.0-1*.rpm
+# sudo rpm -ivh ./x86_64/dummy-redhat-release-8.7-1*.rpm
 
 

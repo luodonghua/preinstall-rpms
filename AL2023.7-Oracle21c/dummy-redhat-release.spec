@@ -1,11 +1,11 @@
 Name:           dummy-redhat-release
-Version:        9.0
+Version:        8.7
 Release:        1%{?dist}
 Summary:        Dummy Red Hat Enterprise Linux release file
 License:        MIT
 
 BuildArch:      x86_64
-Provides:       redhat-release = 9.0
+Provides:       redhat-release = 8,7
 #Provides:       system-release = 2023.7.20250331
 
 %description
@@ -20,12 +20,11 @@ for packages that require it on non-RHEL systems like Amazon Linux.
 
 %install
 mkdir -p %{buildroot}/etc
-echo "Red Hat Enterprise Linux release 9.0 (Plow)" > %{buildroot}/etc/redhat-release
+echo "Red Hat Enterprise Linux release 8.7 (Ootpa)" > %{buildroot}/etc/redhat-release
 
 %files
 %attr(0644,root,root) /etc/redhat-release
 
 %changelog
-* Thu Mar 20 2025 User <user@example.com> - 9.0-1
-- Initial package
-EOF
+* Sat Apr 12 2025 User <user@example.com> - 8.7-1
+- Initial package for RHEL 8 compatibility

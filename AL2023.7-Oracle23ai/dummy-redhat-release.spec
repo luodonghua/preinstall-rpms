@@ -28,4 +28,3 @@ echo "Red Hat Enterprise Linux release 9.0 (Plow)" > %{buildroot}/etc/redhat-rel
 %changelog
 * Thu Mar 20 2025 User <user@example.com> - 9.0-1
 - Initial package
-EOF
