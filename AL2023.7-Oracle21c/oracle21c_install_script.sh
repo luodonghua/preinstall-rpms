@@ -24,7 +24,7 @@ sudo dnf install -y libxcrypt-compat
 
 # Configure Database
 #
-sudo su -c "(echo 'Welcome123_'; echo 'Welcome123_';) | /etc/init.d/oracle-xe-21c configure"
+sudo su -c "(echo '${ORACLE_PASSWORD}'; echo '${ORACLE_PASSWORD}';) | /etc/init.d/oracle-xe-21c configure"
 
 # Configure AutoStart
 sudo sed -i 's/\(.*\):N$/\1:Y/' /etc/oratab
@@ -42,7 +42,7 @@ sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/ec2-user/.bash_profile"
 
 # DISABLE EM Expresss https://<public IP>:5500/em
 . ~/.bash_profile
-sqlplus SYSTEM/Welcome123_ <<EOD
+sqlplus SYSTEM/${ORACLE_PASSWORD} <<EOD
 EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);
 EXEC  DBMS_XDB_CONFIG.SETHTTPPORT(0);
 EOD
