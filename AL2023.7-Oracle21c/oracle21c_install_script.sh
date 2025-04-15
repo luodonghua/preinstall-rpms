@@ -32,12 +32,16 @@ sudo systemctl enable --now oracle-xe-21c
 
 # Setup Oracle Envronment Variable
 sudo su -c "echo 'export ORACLE_SID=XE' >> /home/oracle/.bash_profile"
-sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/oracle/.bash_profile"
-sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/oracle/.bash_profile"
+sudo su -c "echo 'export ORACLE_BASE=/opt/oracle' >> /home/oracle/.bash_profile"
+sudo su -c "echo 'export ORACLE_HOME=/opt/oracle/product/21c/dbhomeXE' >> /home/oracle/.bash_profile"
+sudo su -c "echo 'export PATH=$ORACLE_HOME/bin:$PATH' >> /home/oracle/.bash_profile"
+sudo su -c "echo 'export LD_LIBRARY_PATH=/lib64:$ORACLE_HOME/lib' >> /home/oracle/.bash_profile"
 
 sudo su -c "echo 'export ORACLE_SID=XE' >> /home/ec2-user/.bash_profile"
-sudo su -c "echo 'export ORAENV_ASK=NO' >> /home/ec2-user/.bash_profile"
-sudo su -c "echo '. /usr/local/bin/oraenv'  >> /home/ec2-user/.bash_profile"
+sudo su -c "echo 'export ORACLE_BASE=/opt/oracle' >> /home/ec2-user/.bash_profile"
+sudo su -c "echo 'export ORACLE_HOME=/opt/oracle/product/21c/dbhomeXE' >> /home/ec2-user/.bash_profile"
+sudo su -c "echo 'export PATH=$ORACLE_HOME/bin:$PATH' >> /home/ec2-user/.bash_profile"
+sudo su -c "echo 'export LD_LIBRARY_PATH=/lib64:$ORACLE_HOME/lib' >> /home/ec2-user/.bash_profile"
 
 
 # DISABLE EM Expresss https://<public IP>:5500/em
