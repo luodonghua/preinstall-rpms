@@ -34,14 +34,14 @@ sudo systemctl enable --now oracle-xe-21c
 sudo su -c "echo 'export ORACLE_SID=XE' >> /home/oracle/.bash_profile"
 sudo su -c "echo 'export ORACLE_BASE=/opt/oracle' >> /home/oracle/.bash_profile"
 sudo su -c "echo 'export ORACLE_HOME=/opt/oracle/product/21c/dbhomeXE' >> /home/oracle/.bash_profile"
-sudo su -c "echo 'export PATH=$ORACLE_HOME/bin:$PATH' >> /home/oracle/.bash_profile"
-sudo su -c "echo 'export LD_LIBRARY_PATH=/lib64:$ORACLE_HOME/lib' >> /home/oracle/.bash_profile"
+sudo su -c "echo 'export PATH=\$ORACLE_HOME/bin:\$PATH' >> /home/oracle/.bash_profile"
+sudo su -c "echo 'export LD_LIBRARY_PATH=/lib64:\$ORACLE_HOME/lib' >> /home/oracle/.bash_profile"
 
 sudo su -c "echo 'export ORACLE_SID=XE' >> /home/ec2-user/.bash_profile"
 sudo su -c "echo 'export ORACLE_BASE=/opt/oracle' >> /home/ec2-user/.bash_profile"
 sudo su -c "echo 'export ORACLE_HOME=/opt/oracle/product/21c/dbhomeXE' >> /home/ec2-user/.bash_profile"
-sudo su -c "echo 'export PATH=$ORACLE_HOME/bin:$PATH' >> /home/ec2-user/.bash_profile"
-sudo su -c "echo 'export LD_LIBRARY_PATH=/lib64:$ORACLE_HOME/lib' >> /home/ec2-user/.bash_profile"
+sudo su -c "echo 'export PATH=\$ORACLE_HOME/bin:\$PATH' >> /home/ec2-user/.bash_profile"
+sudo su -c "echo 'export LD_LIBRARY_PATH=/lib64:\$ORACLE_HOME/lib' >> /home/ec2-user/.bash_profile"
 
 
 # DISABLE EM Expresss https://<public IP>:5500/em
@@ -63,7 +63,7 @@ echo "shutdown immediate" >> /tmp/enable_archivelog.sh
 echo "startup mount" >> /tmp/enable_archivelog.sh
 echo "alter database archivelog;" >> /tmp/enable_archivelog.sh
 echo "alter database open;" >> /tmp/enable_archivelog.sh
-echo "EOD" >> /tmp/enable_archivelog.s
+echo "EOD" >> /tmp/enable_archivelog.sh
 
 chmod +x  /tmp/enable_archivelog.sh
 sudo su - oracle -c  /tmp/enable_archivelog.sh
