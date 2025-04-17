@@ -8,10 +8,10 @@ sudo dnf install -y wget
 # https://yum.oracle.com/repo/OracleLinux/OL9/appstream/x86_64/
 # https://www.oracle.com/database/free/get-started/
 #
-wget https://yum.oracle.com/repo/OracleLinux/OL9/appstream/x86_64/getPackage/oracle-database-preinstall-23ai-1.0-2.el9.x86_64.rpm
-wget https://download.oracle.com/otn-pub/otn_software/db-free/oracle-database-free-23ai-1.0-1.el9.x86_64.rpm
-wget https://github.com/luodonghua/preinstall-rpms/raw/refs/heads/main/AL2023.7-Oracle23ai/x86_64/dummy-redhat-release-9.0-1.amzn2023.x86_64.rpm
-wget https://github.com/luodonghua/preinstall-rpms/raw/refs/heads/main/AL2023.7-Oracle23ai/x86_64/dummy-xorg-x11-utils-7.5-39.amzn2023.x86_64.rpm
+wget -q https://yum.oracle.com/repo/OracleLinux/OL9/appstream/x86_64/getPackage/oracle-database-preinstall-23ai-1.0-2.el9.x86_64.rpm
+wget -q https://download.oracle.com/otn-pub/otn_software/db-free/oracle-database-free-23ai-1.0-1.el9.x86_64.rpm
+wget -q https://github.com/luodonghua/preinstall-rpms/raw/refs/heads/main/AL2023.7-Oracle23ai/x86_64/dummy-redhat-release-9.0-1.amzn2023.x86_64.rpm
+wget -q https://github.com/luodonghua/preinstall-rpms/raw/refs/heads/main/AL2023.7-Oracle23ai/x86_64/dummy-xorg-x11-utils-7.5-39.amzn2023.x86_64.rpm
 
 
 # Install Oracle Prerequisites
